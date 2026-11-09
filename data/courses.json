@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-10",
+  "center": {
+    "id": "bukbu-sinjin",
+    "name": "북부신진자동차운전전문학원",
+    "address": "경기 남양주시 진접읍 장현로147번길 6",
+    "location": [37.718, 127.19],
+    "locationVerified": false
+  },
+  "courses": [
+    {
+      "id": "A",
+      "name": "A코스",
+      "color": "#2563eb",
+      "summary": "",
+      "distanceKm": 0,
+      "path": [],
+      "checkpoints": []
+    },
+    {
+      "id": "B",
+      "name": "B코스",
+      "color": "#16a34a",
+      "summary": "",
+      "distanceKm": 0,
+      "path": [],
+      "checkpoints": []
+    },
+    {
+      "id": "C",
+      "name": "C코스",
+      "color": "#ea580c",
+      "summary": "",
+      "distanceKm": 0,
+      "path": [],
+      "checkpoints": []
+    },
+    {
+      "id": "D",
+      "name": "D코스",
+      "color": "#9333ea",
+      "summary": "",
+      "distanceKm": 0,
+      "path": [],
+      "checkpoints": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>코스 좌표 찍기 도구</title>
+  <link rel="stylesheet" href="picker.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="map-area">
+      <div id="map"></div>
+      <div id="mode-badge" class="mode-badge">경로 찍기</div>
+    </div>
+
+    <aside class="side">
+      <h1>코스 좌표 찍기</h1>
+      <p id="msg" class="msg" hidden></p>
+
+      <section>
+        <label>코스
+          <select id="course"></select>
+        </label>
+        <div class="row">
+          <label class="radio"><input type="radio" name="mode" value="path" checked> 경로 찍기</label>
+          <label class="radio"><input type="radio" name="mode" value="checkpoint"> 검사점 찍기</label>
+        </div>
+        <p id="stats" class="stats"></p>
+        <div class="row">
+          <button id="undo" type="button">마지막 점 취소 (Ctrl+Z)</button>
+          <button id="clear-path" type="button" class="danger">이 코스 경로 지우기</button>
+        </div>
+      </section>
+
+      <section id="cp-form" class="cp-form">
+        <h2>검사점 정보 <small>(입력 후 지도 클릭)</small></h2>
+        <label>종류 <select id="cp-type"></select></label>
+        <label>이름 <input id="cp-label" type="text" placeholder="예: 진접농협 앞 사거리 좌회전"></label>
+        <label>팁 <textarea id="cp-tip" rows="3" placeholder="예: 1차로에서 좌측 깜빡이 켜고 대기, 비보호 아님"></textarea></label>
+      </section>
+
+      <section>
+        <h2>찍은 검사점</h2>
+        <p id="cp-count" class="hint"></p>
+        <ol id="cp-list" class="cp-list"></ol>
+      </section>
+
+      <section>
+        <h2>코스 설명</h2>
+        <textarea id="summary" rows="2" placeholder="예: 가장 짧고 무난한 코스. 지시속도 구간이 직선이라 쉬움"></textarea>
+      </section>
+
+      <section>
+        <h2>학원 위치</h2>
+        <div class="row">
+          <input id="address" type="text">
+          <button id="geocode" type="button">주소로 찾기</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>저장</h2>
+        <div class="row">
+          <button id="copy" type="button" class="primary">JSON 복사</button>
+          <button id="download" type="button">courses.json 다운로드</button>
+        </div>
+        <div class="row">
+          <button id="reload" type="button">원본 data/courses.json 다시 불러오기</button>
+        </div>
+        <textarea id="output" rows="8" readonly></textarea>
+        <p class="hint">작업 내용은 이 브라우저에 자동 임시저장됩니다.</p>
+      </section>
+    </aside>
+  </div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="picker.js"></script>
+</body>
+</html>

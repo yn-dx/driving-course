@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>코스별 지점 팁</title>
+  <meta name="description" content="도로주행 A·B·C·D 코스의 주요 지점과 지점별 주의사항">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./">
+        <span class="brand__title">도로주행 코스 노트</span>
+        <span class="brand__sub">북부신진자동차운전전문학원</span>
+      </a>
+      <nav class="page-nav" aria-label="페이지">
+        <a href="./">홈</a>
+        <a href="tips.html" aria-current="page">코스별 팁</a>
+        <a href="function.html">기능코스</a>
+        <a href="./#academy">학원 정보</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="course-tabs">
+    <div class="course-tabs__inner" id="course-tabs" aria-label="코스 선택"></div>
+  </div>
+
+  <main>
+    <div class="course-layout">
+      <div class="map-wrap" id="map-wrap">
+        <div class="map-status" id="map-status">지도를 불러오는 중…</div>
+        <div class="map" id="map"></div>
+      </div>
+
+      <div class="panel" id="panel">
+        <h2 class="card__title" id="points-title">주요 지점</h2>
+        <ol class="point-list" id="point-list"></ol>
+      </div>
+    </div>
+
+    <div class="sections">
+      <section class="card span-2" id="common" aria-labelledby="common-title">
+        <h2 class="card__title" id="common-title">공통 주의사항</h2>
+        <ul class="caution-list" id="caution-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>이 사이트는 수강생이 만든 <strong>비공식</strong> 복습용 페이지이며, 학원·시험장의 공식 안내가 아닙니다.</p>
+    <p>코스와 규정은 바뀔 수 있으니 최종 내용은 학원 안내를 따르세요. · 정보 기준일 <span id="updated-at">-</span></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/tips.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>도로주행 코스 노트</title>
+  <meta name="description" content="북부신진자동차운전전문학원 도로주행 A·B·C·D 코스와 검사점, 시험 팁을 빠르게 복습하는 비공식 안내 페이지">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./">
+        <span class="brand__title">도로주행 코스 노트</span>
+        <span class="brand__sub">북부신진자동차운전전문학원</span>
+      </a>
+      <nav class="page-nav" aria-label="페이지">
+        <a href="./" aria-current="page">홈</a>
+        <a href="tips.html">코스별 팁</a>
+        <a href="function.html">기능코스</a>
+        <a href="#academy">학원 정보</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="course-tabs">
+    <div class="course-tabs__inner" id="course-tabs" aria-label="코스 선택"></div>
+  </div>
+
+  <main>
+    <div class="course-layout">
+      <div class="map-wrap" id="map-wrap">
+        <div class="map-status" id="map-status">지도를 불러오는 중…</div>
+        <div class="map" id="map"></div>
+        <div class="map-info" id="map-info" hidden aria-live="polite">
+          <div class="map-info__title" id="map-info-title"></div>
+          <div class="map-info__tip" id="map-info-tip"></div>
+          <button type="button" class="map-info__close" id="map-info-close" aria-label="닫기">×</button>
+        </div>
+      </div>
+
+      <div class="panel" id="panel">
+        <section class="card summary" id="summary" aria-live="polite"></section>
+        <section class="card" aria-labelledby="cp-title">
+          <h2 class="card__title"><span id="cp-title">검사점</span><a id="tips-link" href="tips.html">지점별 팁 자세히 ›</a></h2>
+          <ol class="cp-list" id="cp-list"></ol>
+        </section>
+      </div>
+    </div>
+
+    <div class="sections">
+      <section class="card" aria-labelledby="caution-title">
+        <h2 class="card__title"><span id="caution-title">공통 주의사항</span><a href="tips.html#common">전체 보기 ›</a></h2>
+        <ul class="caution-list" id="caution-preview"></ul>
+      </section>
+
+      <section class="card" aria-labelledby="prep-title">
+        <h2 class="card__title" id="prep-title">시험 당일 준비물</h2>
+        <ul class="prep-list" id="prep-list"></ul>
+      </section>
+
+      <section class="card" id="academy" aria-labelledby="academy-title">
+        <h2 class="card__title" id="academy-title">학원 정보</h2>
+        <div id="academy-body"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>이 사이트는 수강생이 만든 <strong>비공식</strong> 복습용 페이지이며, 학원·시험장의 공식 안내가 아닙니다.</p>
+    <p>코스와 규정은 바뀔 수 있으니 최종 내용은 학원 안내를 따르세요. · 정보 기준일 <span id="updated-at">-</span></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

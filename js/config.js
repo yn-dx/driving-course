@@ -4,6 +4,6 @@
 //   - 로컬 테스트: http://localhost:8000
 //   - 배포 주소:   https://<깃허브아이디>.github.io
 window.APP_CONFIG = {
-  KAKAO_JS_KEY: 'YOUR_KAKAO_JAVASCRIPT_KEY',
+  KAKAO_JS_KEY: '88bf845474da38ab01773f2f210f52be',
   DATA_URL: 'data/courses.json'
 };
